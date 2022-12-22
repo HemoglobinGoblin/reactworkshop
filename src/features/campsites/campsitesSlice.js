@@ -5,7 +5,7 @@ const initialState = {
     campsitesArray: CAMPSITES
 };
 
-const campsitesSlice = createSlice({
+const campsitesSlice = createSlice ({
     name: 'campsites',
     initialState
 });
