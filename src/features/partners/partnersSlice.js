@@ -26,7 +26,7 @@ const initialState = {
 };
 
 const partnersSlice = createSlice ({
-    name: 'campsites',
+    name: 'partners',
     initialState,
     reducers: {},
     extraReducers: {
@@ -54,5 +54,9 @@ export const SelectAllPartners = (state) => {
 };
 
 export const selectFeaturedPartners = (state) => {
-    return state.partners.partnersArray.find((partner) => partner.featured);
+    return {
+        featuredItem: state.partners.partnersArray.find((partner) => partner.featured),
+        isLoading: state.partners.isLoading,
+        errMsg: state.partners.errMsg
+    }
 }
